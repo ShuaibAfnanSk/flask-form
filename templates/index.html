@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="lander">
+        <div class="video">
+            <video src="/static/images/video.mp4" loop autoplay muted></video>
+        </div>
+        <div class="contact">
+            <form class="form" name="submit-to-google-sheet">
+                <div class="stamp">
+                    <label for="name">name</label>
+                    <input type="text" name="name" placeholder="john doe" required>
+                </div>
+                <div class="stamp">
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="" placeholder="john.doe@email.com" required>
+                </div>
+                <div class="stamp">
+                    <label for="message">message</label>
+                    <textarea name="message" id="" cols="30" rows="5" placeholder="your message here" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+                <span id="msg"></span>
+            </form>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/sandbox.js') }}"></script>
+
+</body>
+
+</html>
